@@ -6,10 +6,11 @@
 //  Copyright (c) 2015年 com.endo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Header.h"
 
-@interface ViewController : UIViewController
-
+@interface ETViewController : GAITrackedViewController
+<UITableViewDelegate,
+UITableViewDataSource>
 
 @end
 

@@ -17,6 +17,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    GAI *gai = [GAI sharedInstance];
+    gai.trackUncaughtExceptions = YES;
+    gai.dispatchInterval = 5;
+    [[gai logger] setLogLevel:kGAILogLevelError]; // ログレベルを変えることができる
+    [gai trackerWithTrackingId:@"UA-46945838-4"];
+    
+    ETViewController *mainViewController =
+    [[ETViewController alloc]init];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setRootViewController:navigationController];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
+    [self.window makeKeyAndVisible];
+    
+
+    
+    
     return YES;
 }
 

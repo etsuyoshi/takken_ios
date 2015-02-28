@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Header.h"
+#import "ETViewController.h"
+
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
